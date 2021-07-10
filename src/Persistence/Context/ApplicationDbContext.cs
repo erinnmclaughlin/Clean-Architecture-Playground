@@ -1,7 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace Persistence.Context
 {
@@ -12,10 +11,5 @@ namespace Persistence.Context
         }
 
         public DbSet<Product> Products { get; set; }
-
-        public async Task<int> SaveChangesAsync()
-        {
-            return await base.SaveChangesAsync();
-        }
     }
 }

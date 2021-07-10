@@ -2,28 +2,43 @@
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
+using WebAPI.Features.ProductFeatures.Responses;
 
 namespace WebAPI.Features.ProductFeatures.Queries
 {
-    public class GetAllProductsQuery : IRequest<IEnumerable<Product>>
+    public class GetAllProductsQuery : IRequest<IEnumerable<GetAllProductsResponse>>
     {
-        public class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, IEnumerable<Product>>
+        
+    }
+
+    internal class GetAllProductsQueryHandler : IRequestHandler<GetAllProductsQuery, IEnumerable<GetAllProductsResponse>>
+    {
+        private readonly IApplicationDbContext _context;
+
+        public GetAllProductsQueryHandler(IApplicationDbContext context)
         {
-            private readonly IApplicationDbContext _context;
+            _context = context;
+        }
 
-            public GetAllProductsQueryHandler(IApplicationDbContext context)
+        public async Task<IEnumerable<GetAllProductsResponse>> Handle(GetAllProductsQuery query, CancellationToken cancellationToken)
+        {
+            Expression<Func<Product, GetAllProductsResponse>> expression = e => new GetAllProductsResponse
             {
-                _context = context;
-            }
+                Id = e.Id,
+                Name = e.Name,
+                Description = e.Description,
+                Barcode = e.Barcode,
+                Rate = e.Rate
+            };
 
-            public async Task<IEnumerable<Product>> Handle(GetAllProductsQuery query, CancellationToken cancellationToken)
-            {
-                var productList = await _context.Products.ToListAsync();
-                return productList?.AsReadOnly();                
-            }
+            var data = await _context.Products.Select(expression).ToListAsync();
+            return data;
         }
     }
 }

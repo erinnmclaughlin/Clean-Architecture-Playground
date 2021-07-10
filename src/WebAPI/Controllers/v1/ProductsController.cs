@@ -7,9 +7,9 @@ using WebAPI.Features.ProductFeatures.Queries;
 namespace WebAPI.Controllers.v1
 {
     [ApiVersion("1.0")]
-    public class ProductController : BaseApiController
+    public class ProductsController : BaseApiController
     {
-        public ProductController(IMediator mediator) : base(mediator)
+        public ProductsController(IMediator mediator) : base(mediator)
         {
         }
 
@@ -53,7 +53,7 @@ namespace WebAPI.Controllers.v1
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));
+            return Ok(await Mediator.Send(new DeleteProductCommand { Id = id }));
         }
 
         /// <summary>
