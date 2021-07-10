@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Features.ProductFeatures.Responses;
+using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -8,9 +9,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using WebAPI.Features.ProductFeatures.Responses;
 
-namespace WebAPI.Features.ProductFeatures.Queries
+namespace Application.Features.ProductFeatures.Queries
 {
     public class GetAllProductsQuery : IRequest<IEnumerable<GetAllProductsResponse>>
     {

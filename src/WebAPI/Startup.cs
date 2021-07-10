@@ -30,7 +30,7 @@ namespace WebAPI
                 config.ReportApiVersions = true;
             });
 
-            services.AddApplication(Assembly.GetExecutingAssembly());
+            services.AddApplication();
             services.AddControllers();
             services.AddPersistence(Configuration);
             services.AddSwaggerGen(c =>

@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Features.ProductFeatures.Responses
+﻿namespace Application.Features.ProductFeatures.Responses
 {
     public class GetAllProductsResponse
     {

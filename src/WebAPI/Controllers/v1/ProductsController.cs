@@ -1,8 +1,8 @@
-﻿using MediatR;
+﻿using Application.Features.ProductFeatures.Commands;
+using Application.Features.ProductFeatures.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using WebAPI.Features.ProductFeatures.Commands;
-using WebAPI.Features.ProductFeatures.Queries;
 
 namespace WebAPI.Controllers.v1
 {

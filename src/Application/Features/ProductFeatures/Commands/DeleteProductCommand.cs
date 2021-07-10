@@ -5,7 +5,7 @@ using Shared.Wrapper;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WebAPI.Features.ProductFeatures.Commands
+namespace Application.Features.ProductFeatures.Commands
 {
     public class DeleteProductCommand : IRequest<Result<int>>
     {

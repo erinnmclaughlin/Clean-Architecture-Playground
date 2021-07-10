@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WebAPI.Features.ProductFeatures.Commands
+namespace Application.Features.ProductFeatures.Commands
 {
     public class UpdateProductCommand : IRequest<Result<int>>
     {

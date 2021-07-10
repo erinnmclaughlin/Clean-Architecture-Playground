@@ -6,9 +6,9 @@ namespace Application
 {
     public static class DependencyInjection
     {
-        public static void AddApplication(this IServiceCollection services, Assembly assembly)
+        public static void AddApplication(this IServiceCollection services)
         {
-            services.AddMediatR(assembly);
+            services.AddMediatR(Assembly.GetExecutingAssembly());
         }
     }
 }
