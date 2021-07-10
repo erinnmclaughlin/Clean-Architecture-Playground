@@ -16,7 +16,7 @@ Other things that might be in this layer:
 
 #### Application Infrastructure
 
-#### Persistence
+##### Persistence
 Adds specific implementations of application requirements. This is where the DbContext lives. The DbContext may contain entities from the Domain layer as well as models from the application layer. You may want to add a repository pattern here that abstracts the DbContext -- this could be helpful if you want to implement things like caching here.
 
 #### Application Presentation
