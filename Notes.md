@@ -1,6 +1,6 @@
-# Notes
+**_Disclaimer: I'm still just learning and some of this might be wrong._**
 
-### Architecutre Layers
+## Architecture Layers
 
 #### Application Core
 
