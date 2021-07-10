@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{CD7730
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{98EEE12D-8248-4BFF-BD9B-D862D6D8234C}"
 	ProjectSection(SolutionItems) = preProject
+		Notes.md = Notes.md
 		README.md = README.md
 	EndProjectSection
 EndProject
