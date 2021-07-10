@@ -5,11 +5,11 @@ namespace WebAPI.Controllers
 {
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class BaseApiController : ControllerBase
+    public class ApiControllerBase : ControllerBase
     {
         protected IMediator Mediator;
 
-        public BaseApiController(IMediator mediator)
+        public ApiControllerBase(IMediator mediator)
         {
             Mediator = mediator;
         }

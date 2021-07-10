@@ -7,11 +7,25 @@
   <ItemGroup>
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.10" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\CustomerFeatures\Queries\GetAllByProjectId\" />
+    <Folder Include="Features\CustomerFeatures\Queries\GetAllByPurchaseOrderId\" />
+    <Folder Include="Features\ProjectFeatures\Queries\GetAllByPurchaseOrderId\" />
+    <Folder Include="Features\ProjectFeatures\Queries\GetAllByCustomerId\" />
+    <Folder Include="Features\ProjectFeatures\Queries\GetAll\" />
+    <Folder Include="Features\ProjectFeatures\Queries\GetById\" />
+    <Folder Include="Features\PurchaseOrderFeatures\Queries\GetAll\" />
+    <Folder Include="Features\PurchaseOrderFeatures\Queries\GetAllByCustomerId\" />
+    <Folder Include="Features\PurchaseOrderFeatures\Queries\GetById\" />
+    <Folder Include="Features\PurchaseOrderFeatures\Queries\GetAllByProjectId\" />
   </ItemGroup>
 
 </Project>

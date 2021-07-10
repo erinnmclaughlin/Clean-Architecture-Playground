@@ -35,7 +35,7 @@ namespace WebAPI
             services.AddPersistence(Configuration);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "OnionArchitecture", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjectManagerApi", Version = "v1" });
             });
         }
 
@@ -46,7 +46,7 @@ namespace WebAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnionArchitecture"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProjectManagerApi"));
             }
 
             app.UseHttpsRedirection();

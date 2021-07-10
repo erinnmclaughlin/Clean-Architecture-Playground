@@ -7,7 +7,12 @@ namespace Application.Interfaces
 {
     public interface IApplicationDbContext
     {
-        DbSet<Product> Products { get; set; }
+        DbSet<Country> Countries { get; set; }
+        DbSet<Customer> Customers { get; set; }
+        DbSet<Project> Projects { get; set; }
+        DbSet<ProjectPurchaseOrder> ProjectPurchaseOrders { get; set; }
+        DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }
